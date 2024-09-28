@@ -75,7 +75,7 @@ const AuthForm = ({ type }: { type: string }) => {
         <Link href={"/"} className="cursor-pointer flex items-center gap-1">
           <img
             src={"/icons/banklogonew.png"}
-            alt="Horizon logo"
+            alt="Moneta logo"
             width={34}
             height={34}
           />
@@ -136,7 +136,7 @@ const AuthForm = ({ type }: { type: string }) => {
                       control={form.control}
                       name="state"
                       label="State"
-                      placeholder="ex. Sindh"
+                      placeholder="ex. NY"
                     />
                     <CustomInput
                       control={form.control}

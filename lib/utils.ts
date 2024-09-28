@@ -207,9 +207,22 @@ export const authformSchema = (type: string) =>
     city:
       type === "sign-in" ? z.string().optional() : z.string().min(3).max(255),
     state:
-      type === "sign-in" ? z.string().optional() : z.string().min(2).max(20),
+      type === "sign-in"
+        ? z.string().optional()
+        : z
+            .string()
+            .min(2, {
+              message:
+                "State should be like NY, CA, for New York and California",
+            })
+            .max(2),
     postalCode:
-      type === "sign-in" ? z.string().optional() : z.string().min(3).max(6),
+      type === "sign-in"
+        ? z.string().optional()
+        : z
+            .string()
+            .min(5, { message: "Postal code must contain five characters" })
+            .max(6),
     dateOfBirth: type === "sign-in" ? z.string().optional() : z.string().min(3),
     ssn: type === "sign-in" ? z.string().optional() : z.string().min(3).max(15),
     // Both
