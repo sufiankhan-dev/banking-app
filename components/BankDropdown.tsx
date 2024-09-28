@@ -48,10 +48,11 @@ export const BankDropdown = ({
         className={`flex w-full bg-white gap-3 md:w-[300px] ${otherStyles}`}
       >
         <Image
-          src="icons/credit-card.svg"
+          src="icons/creditOrange.svg"
           width={20}
           height={20}
           alt="account"
+          // className="text-bankOrange-dark"
         />
         <p className="line-clamp-1 w-full text-left">{selected.name}</p>
       </SelectTrigger>
@@ -71,7 +72,7 @@ export const BankDropdown = ({
             >
               <div className="flex flex-col ">
                 <p className="text-16 font-medium">{account.name}</p>
-                <p className="text-14 font-medium text-blue-600">
+                <p className="text-14 font-medium text-bankOrange-dark">
                   {formatAmount(account.currentBalance)}
                 </p>
               </div>

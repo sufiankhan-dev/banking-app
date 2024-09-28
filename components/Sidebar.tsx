@@ -19,13 +19,13 @@ const Sidebar = ({ user }: SiderbarProps) => {
           className="mb-12 cursor-pointer flex items-center gap-2"
         >
           <Image
-            src={"/icons/logo.svg"}
-            alt="Horizon logo"
+            src={"/icons/banklogonew.png"}
+            alt="Moneta logo"
             width={34}
             height={34}
             className="size-[24px] max-xl:size-14"
           />
-          <h1 className="sidebar-logo">Horizon</h1>
+          <h1 className="sidebar-logo">Moneta</h1>
         </Link>
         {sidebarLinks.map((item) => {
           const isActive =
@@ -35,7 +35,8 @@ const Sidebar = ({ user }: SiderbarProps) => {
               href={item.route}
               key={item.label}
               className={cn("sidebar-link", {
-                "bg-bank-gradient": isActive,
+                "bg-gradient-to-r from-bankOrange-dark to-bankOrange-light":
+                  isActive,
               })}
             >
               <div className="relative size-6">

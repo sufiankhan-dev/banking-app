@@ -68,6 +68,10 @@ const config = {
           700: "#344054",
           900: "#101828",
         },
+        bankOrange: {
+          dark: "#f05c1f",
+          light: "#fe9868",
+        },
       },
       backgroundImage: {
         "bank-gradient": "linear-gradient(90deg, #0179FE 0%, #4893FF 100%)",
